@@ -87,7 +87,7 @@ class IPFS
      * @return string|null
      * @throws Exception
      */
-    public function add(string $content, array $params = []): ?string
+    public function add(string $content, array $params = [])
     {
         $response = $this->safeDecode(
             $this->curl($this->getApiUrl() . "/add", $content, $params)
